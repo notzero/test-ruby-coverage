@@ -6,14 +6,9 @@ Bundler.require(:default)
 require 'coveralls'
 Coveralls.wear!
 
-class MyClass
-  def a
-    puts "untested!"
-  end
+SimpleCov.command_name 'uneeet'
+SimpleCov.start
 
-  def b
-    puts "TESTED"
-  end
-end
+require './my_class'
 
 MyClass.new.b
